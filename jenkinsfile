@@ -7,6 +7,6 @@ stage("SCM Checkout")
 stage("Compile-Package)
 {//Get mvn home path
  def mvnHome = tool name: 'maven', type: 'maven'
- sh "$(mvnHome)/usr/bin/mvn package"
+ sh "$(mvnHome)/bin/mvn package"
 }
 }
