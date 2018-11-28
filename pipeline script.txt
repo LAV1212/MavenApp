@@ -1,0 +1,20 @@
+//Declarative//
+pipeline
+{
+agent any(docker container name)
+
+stages
+{
+stage("Build")
+{
+ steps
+{
+  sh "make"
+}
+}
+stage("test")
+{
+ steps
+{
+ sh "make check"
+junit 
